@@ -4,8 +4,9 @@ services:
     container_name: crud-app
     ports:
       - "8080:8080"
-    environment:
-      - SPRING_PROFILES_ACTIVE=prod
+    env_file:
+      - dev.env
+      # - prod.env
     networks:
       - faculdade-network
 
