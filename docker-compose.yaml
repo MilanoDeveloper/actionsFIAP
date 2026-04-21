@@ -1,0 +1,14 @@
+services:
+  app-java:
+    build: .
+    container_name: crud-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    networks:
+      - faculdade-network
+
+networks:
+  faculdade-network:
+    driver: bridge
